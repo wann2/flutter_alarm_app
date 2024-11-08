@@ -44,8 +44,7 @@ class _AlarmScreenState extends State<AlarmScreen> with WidgetsBindingObserver {
     // 알람 콜백 ID는 `AlarmScheduler`에 의해 일(0), 월(1), 화(2), ... , 토요일(6) 만큼 더해져 있다.
     // 따라서 이를 7로 나눈 몫이 해당 요일을 나타낸다.
     final firedAlarmWeekday = callbackAlarmId % 7;
-    final nextAlarmTime =
-        widget.alarm.timeOfDay.toComingDateTimeAt(firedAlarmWeekday);
+    final nextAlarmTime = widget.alarm.timeOfDay.toComingDateTimeAt(firedAlarmWeekday);
 
     await AlarmScheduler.reschedule(callbackAlarmId, nextAlarmTime);
 
@@ -61,7 +60,7 @@ class _AlarmScreenState extends State<AlarmScreen> with WidgetsBindingObserver {
           children: [
             Text(
               '알람 화면',
-              style: Theme.of(context).textTheme.headline4,
+              style: Theme.of(context).textTheme.headlineMedium,
             ),
             TextButton(
               onPressed: _dismissAlarm,

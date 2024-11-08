@@ -130,7 +130,7 @@ class _AlarmCard extends StatelessWidget {
               Expanded(
                 child: Text(
                   alarm.timeOfDay.format(context),
-                  style: theme.textTheme.headline6!.copyWith(
+                  style: theme.textTheme.headlineMedium!.copyWith(
                     color: theme.colorScheme.onSurface.withOpacity(
                       alarm.enabled ? 1.0 : 0.4,
                     ),
